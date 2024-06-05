@@ -174,7 +174,7 @@ alert dns any any -> any any (msg:"C2 Domain Check-in"; dns_query; content:"exam
 alert udp any any -> any 53 (msg:"C2 Domain Check-in"; content:"example.com"; nocase; classtype:command-and-control; sid:1000010;)
 ```
 
-## Section 1.4.7: H
+## Section 1.4.7: Hiding C2 and Data Exfiltration in HTTP Requests
 
 iding C2 and Data Exfiltration in HTTP Requests
 
