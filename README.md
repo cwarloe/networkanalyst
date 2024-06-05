@@ -1,5 +1,4 @@
-# Study Guide for Network Security Analysis
-
+# Study Guide for Network Analyst Senior - Test 2
 ## Section 1.3.3: Initial Exploitation
 
 ### HTTP GET Request Brute Force Attack
