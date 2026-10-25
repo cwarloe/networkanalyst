@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BBP Outline - Network Analyst Study Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: white;
+    }
+
+    .bbp-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid black;
+      margin-bottom: 20px;
+      table-layout: fixed;
+    }
+
+    .bbp-table td {
+      border: 1px solid black;
+      padding: 12px;
+      vertical-align: top;
+      font-size: 11pt;
+    }
+
+    .section-header {
+      background-color: #e8e8e8;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .act-header {
+      background-color: #d0d0d0;
+      font-weight: bold;
+      font-size: 12pt;
+      text-align: center;
+    }
+
+    .key-idea-cell {
+      background-color: #f0f0f0;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+
+    .explanation-cell {
+      background-color: #f8f8f8;
+      vertical-align: middle;
+    }
+
+    .footer-text {
+      font-size: 10pt;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .label {
+      display: block;
+      font-size: 9pt;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Beyond Bullet Points Outline</h1>
+  <h2>Network Analyst Study Guide</h2>
+  <h3>Audience: network analyst candidates preparing for a senior-level test</h3>
+
+  <table class="bbp-table">
+    <colgroup>
+      <col style="width: 30%">
+      <col style="width: 30%">
+      <col style="width: 40%">
+    </colgroup>
+
+    <tr><td colspan="3" class="section-header">TITLE</td></tr>
+    <tr>
+      <td colspan="3"><strong>Detect It, Then Write the Rule</strong><br>A study guide that pairs attack patterns with the logs, filters, and IDS rules that detect them.</td>
+    </tr>
+
+    <tr><td colspan="3" class="act-header">ACT 1: SETUP</td></tr>
+    <tr>
+      <td class="section-header">Setting</td>
+      <td class="section-header">Role</td>
+      <td class="section-header">Point A</td>
+    </tr>
+    <tr>
+      <td>You're preparing for a senior network analyst test covering attacks and detection.</td>
+      <td>You're the analyst who must recognize an attack pattern and write the detection.</td>
+      <td>Attack types, log sources, and rule syntax are scattered, and hard to recall together.</td>
+    </tr>
+
+    <tr><td colspan="3" class="section-header">TRANSITION 1</td></tr>
+    <tr><td colspan="3">The guide organizes the material by test section. Three ideas explain it: the attacks, the detection toolkit, and the patterns behind future signatures.</td></tr>
+
+    <tr><td colspan="3" class="act-header">ACT 2: DEVELOP THE ACTION</td></tr>
+    <tr>
+      <td class="section-header">Key Idea (5 minutes)</td>
+      <td class="section-header">Explanation (15 minutes)</td>
+      <td class="section-header">Details (45 minutes)</td>
+    </tr>
+
+    <tr>
+      <td rowspan="9" class="key-idea-cell"><span class="label">Key Idea 1</span>Attacks Are Studied by the Evidence They Leave</td><td rowspan="3" class="explanation-cell"><span class="label">Explanation 1</span><strong>Initial Exploitation:</strong> how attackers get in</td><td>HTTP GET and POST brute force</td>
+    </tr>
+    <tr>
+      <td>Reflected cross-site scripting</td>
+    </tr>
+    <tr>
+      <td>Persistent cross-site scripting</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell"><span class="label">Explanation 2</span><strong>Actions on Target:</strong> what happens after</td><td>Command and control, lateral movement</td>
+    </tr>
+    <tr>
+      <td>Data exfiltration and obfuscation</td>
+    </tr>
+    <tr>
+      <td>Multi-stage malware and persistence</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell"><span class="label">Explanation 3</span><strong>Web and DNS Anomalies:</strong> signs hidden in normal protocols</td><td>C2 and exfiltration hidden in HTTP</td>
+    </tr>
+    <tr>
+      <td>Anomalous web connection behavior</td>
+    </tr>
+    <tr>
+      <td>DNS spoofing</td>
+    </tr>
+
+    <tr><td colspan="3" class="section-header">TRANSITION 2</td></tr>
+    <tr><td colspan="3">Restate: attacks leave evidence. Relate: evidence only helps if you know where to look and how to write it down. Introduce: logs, filters, and rules.</td></tr>
+
+    <tr>
+      <td rowspan="9" class="key-idea-cell"><span class="label">Key Idea 2</span>Each Pattern Pairs a Detection Method with a Rule</td><td rowspan="3" class="explanation-cell"><span class="label">Explanation 1</span><strong>Where to Look:</strong> choose the right source</td><td>Web server access logs</td>
+    </tr>
+    <tr>
+      <td>Wireshark display filters</td>
+    </tr>
+    <tr>
+      <td>Suricata log files</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell"><span class="label">Explanation 2</span><strong>How to Write It:</strong> turn a pattern into a rule</td><td>Suricata rules</td>
+    </tr>
+    <tr>
+      <td>Snort rules</td>
+    </tr>
+    <tr>
+      <td>Thresholds by source address</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell"><span class="label">Explanation 3</span><strong>Configuring the IDS:</strong> set the stage first</td><td>Variables in an IDS</td>
+    </tr>
+    <tr>
+      <td>Configure the home network addresses</td>
+    </tr>
+    <tr>
+      <td>Watch for IRC and malicious domains</td>
+    </tr>
+
+    <tr><td colspan="3" class="section-header">TRANSITION 3</td></tr>
+    <tr><td colspan="3">Restate: each pattern has a detection method and a rule. Relate: good signatures come from recognizing behavior. Introduce: the patterns worth remembering.</td></tr>
+
+    <tr>
+      <td rowspan="9" class="key-idea-cell"><span class="label">Key Idea 3</span>Behavior Patterns Become Signatures for Future Detection</td><td rowspan="3" class="explanation-cell"><span class="label">Explanation 1</span><strong>Timing and Persistence:</strong> when and how long</td><td>Late-night connections</td>
+    </tr>
+    <tr>
+      <td>Beaconing</td>
+    </tr>
+    <tr>
+      <td>Long-standing connections</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell"><span class="label">Explanation 2</span><strong>DNS and Traffic Oddities:</strong> what doesn't look normal</td><td>Frequent requests for non-existent domains</td>
+    </tr>
+    <tr>
+      <td>Unusual traffic patterns</td>
+    </tr>
+    <tr>
+      <td>Lateral movement in Windows logs</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell"><span class="label">Explanation 3</span><strong>Practice Material:</strong> test it yourself</td><td>Study guide for the senior test</td>
+    </tr>
+    <tr>
+      <td>Sample capture files</td>
+    </tr>
+    <tr>
+      <td>Organized section by section</td>
+    </tr>
+
+    <tr><td colspan="3" class="act-header">ACT 3: RESOLUTION</td></tr>
+    <tr>
+      <td class="section-header">Challenge</td>
+      <td class="section-header">Action</td>
+      <td class="section-header">Outcome</td>
+    </tr>
+    <tr>
+      <td><strong>Can I recognize it and detect it?</strong><br><br>• Which attack is this?<br>• Which log or filter shows it?<br>• What rule would catch it next time?</td>
+      <td><strong>Study this way:</strong><br><br>• Work section by section<br>• Practice with the sample captures<br>• Write the rule from memory</td>
+      <td><strong>Test-ready skills:</strong><br><br>• Attack patterns recognized quickly<br>• Right log source and filter chosen<br>• Rules written with confidence</td>
+    </tr>
+
+    <tr><td colspan="3" class="section-header">CLOSING LINE</td></tr>
+    <tr><td colspan="3">See the pattern, find the evidence, write the rule.</td></tr>
+
+    <tr>
+      <td colspan="3" class="footer-text">
+        Beyond Bullet Points Story Template, &copy; 2007 Cliff Atkinson<br>
+        Network Analyst Study Guide
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
